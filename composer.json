@@ -17,9 +17,9 @@
     },
     "require": {
         "php": "^8.2",
-        "illuminate/support": "^10.28"
+        "illuminate/support": "^10.28",
+        "livewire/livewire": "^2.4.4"
     },
-    "require-dev": {},
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
@@ -33,7 +33,7 @@
                 "VEY\\LightLivewireDatatable\\Providers\\LightLivewireDatatableProvider"
             ],
             "aliases": {
-                "LightLivewireDatatable": "VEY\\LightLivewireDatatable\\Facades\\LightLivewireDatatable"
+                "LightLivewireDatatable": "VEY\\LightLivewireDatatable\\Facades\\LightLivewireDatatableFacade"
             }
         }
     }
