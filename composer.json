@@ -1,0 +1,40 @@
+{
+    "name": "juststeveking/laravel-data-object-tools",
+    "description": "A set of tools to make working with Data Transfer Objects easier in Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+        "role": "Developer",
+        "name": "Edward V",
+        "email": "v.eduard.y@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "VEY\\LightLivewireDatatable\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.28"
+    },
+    "require-dev": {},
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "VEY\\LightLivewireDatatable\\Providers\\LightLivewireDatatableProvider"
+            ],
+            "aliases": {
+                "LightLivewireDatatable": "VEY\\LightLivewireDatatable\\Facades\\LightLivewireDatatable"
+            }
+        }
+    }
+}
