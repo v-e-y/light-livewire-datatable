@@ -16,11 +16,11 @@ trait WithChildLWComponents
      * @var array<array<string|array>> $childPreTableLWComponents
      * @example ['name' => 'component-name', 'params' => ['param1' => 'value1', 'param2' => 'value2'], 'cssWrapperClasses' => '']
      */
-    public array $childPreBodyLWComponents = [];
+    public array $childPreTableLWComponents = [];
 
     /** 
      * @var array<array<string|array>> $childAfterTableLWComponents
      * @example ['name' => 'component-name', 'params' => ['param1' => 'value1', 'param2' => 'value2'], 'cssWrapperClasses' => '']
      */
-    public array $childAfterBodyLWComponents = [];
+    public array $childAfterTableLWComponents = [];
 }
