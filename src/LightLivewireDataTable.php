@@ -12,7 +12,7 @@ abstract class LightLivewireDataTable extends Component
     use WithChildLWComponents;
 
     /** @var string $tableName */
-    public string $tableName = 'Table name';
+    public string $tableName = '';
     /** @var ?string $tableSummary */
     public ?string $tableSummary = null;
 
