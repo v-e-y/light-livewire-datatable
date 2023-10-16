@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "VEY\\LightLivewireDatatable\\": "src/"
+            "VEY\\LightLivewireDataTable\\": "src/"
         }
     },
     "require": {
@@ -31,10 +31,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VEY\\LightLivewireDatatable\\Providers\\LightLivewireDatatableProvider"
+                "VEY\\LightLivewireDataTable\\Providers\\LightLivewireDatatableProvider"
             ],
             "aliases": {
-                "LightLivewireDatatable": "VEY\\LightLivewireDatatable\\Facades\\LightLivewireDatatableFacade"
+                "LightLivewireDataTable": "VEY\\LightLivewireDataTable\\Facades\\LightLivewireDatatableFacade"
             }
         }
     }
