@@ -46,4 +46,24 @@
     @if (count($this->childPreTableHTMLComponents))
         @include('partials.html-components.pre-table', ['childPreTableHTMLComponents' => $this->childPreTableHTMLComponents])
     @endif
+    <section
+        id="light_livewire_datatable_table_wrapper_{{ ($tableName) ? Str::slug($tableName, '_') : $this->id }}"
+        class="{{ ($this->tableResponsive) ? 'table-responsive' : '' }}"
+    >
+        <table
+            id="light_livewire_datatable_table_{{ ($tableName) ? Str::slug($tableName, '_') : $this->id }}"
+            class="table table-{{ $this->tableSize}} {{ $this->tableCssClasses }}"
+        >
+            <thead>
+                <tr>
+                    @foreach ($this->columns->all() as $column)
+                        @continue($column->hidden)
+                        @if ($column->orderable)
+
+                        @endif
+                    @endforeach
+                </tr>
+            </thead>
+        </table>
+    </section>
 </article>

@@ -23,6 +23,12 @@ abstract class LightLivewireDataTable extends Component
     public string $tableName = '';
     /** @var ?string $tableSummary */
     public ?string $tableSummary = null;
+    /** @var bool $tableCResponsive */
+    public bool $tableResponsive = true;
+    /** @var string $tableSize options: sm, md, lg */
+    public string $tableSize = 'md';
+    /** @var string $tableCssClasses */
+    public string $tableCssClasses = '';
 
     public function render()
     {
