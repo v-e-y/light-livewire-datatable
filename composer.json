@@ -1,6 +1,7 @@
 {
-    "name": "juststeveking/laravel-data-object-tools",
+    "name": "v-e-y/light-livewire-datatable",
     "description": "A set of tools to make working with Data Transfer Objects easier in Laravel",
+    "homepage": "https://github.com/v-e-y/light-livewire-datatable",
     "type": "library",
     "license": "MIT",
     "authors": [
