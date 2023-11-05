@@ -37,6 +37,9 @@
                 @if ($exports && count($exportsOptions))
                     @include('partials.exports')
                 @endif
+                @if ($this->hidingColumns && $this->columns->hasHidingColumns())
+                    @include('partials.hiding-columns')
+                @endif
             </div>
         </div>
     </section>

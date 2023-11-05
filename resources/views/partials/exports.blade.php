@@ -26,12 +26,11 @@
             </button>
             <ul class="dropdown-menu">
                 @foreach ($exportsOptions as $exportOption)
-                    <li>
+                    <li wire:key="export_option_methodName_{{ $loop->index }}_{{ $this->id }}">
                         <button 
                             class="dropdown-item" 
                             type="button" 
                             wire:click="{{ $methodName }}"
-                            wire:key="export_{{ $methodName }}"
                         >
                             @if (isset($exportOption['buttonIcon']))
                                 {!! $exportOption['buttonIcon'] !!}

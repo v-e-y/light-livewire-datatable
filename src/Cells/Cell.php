@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace VEY\LightLivewireDataTable\Cells;
 
+use VEY\LightLivewireDataTable\Enum\ConditionOptionsEnum;
+
 final class Cell
 {
     /** @var ?string $cssClasses */
     public ?string $cssClasses = null;
-
-    /** @var array<string> $availableConditions */
-    private array $availableConditions = ['===', '!==', '==', '!=', '>', '<', '>=', '<='];
 
     /** @var ?array<string> $conditionCssId ['condition' => '', 'id' => ''] */
     public ?array $conditionCssId = null;
@@ -37,19 +36,14 @@ final class Cell
 
     /**
      * Set cell CSS classes based on condition.
-     * @param string $condition Condition to be checked
-     * Available conditions: ===, !==, ==, !=, >, <, >=, <=
+     * @param ConditionOptionsEnum $condition
      * @param string $cssClasses
      * @return self|Exception
      */
-    public function setConditionCssClasses(string $condition, string $cssClasses): self
+    public function setConditionCssClasses(ConditionOptionsEnum $condition, string $cssClasses): self
     {
-        if (!in_array($condition, $this->availableConditions)) {
-            throw new \Exception('Condition not available.');
-        }
-
         $this->conditionCssClasses = [
-            'condition' => $condition,
+            'condition' => $condition->value,
             'classes' => $cssClasses,
         ];
         return $this;
@@ -60,14 +54,10 @@ final class Cell
      * @param string $cssId
      * @return self
      */
-    public function setConditionCssId(string $condition, string $cssId): self
+    public function setConditionCssId(ConditionOptionsEnum $condition, string $cssId): self
     {
-        if (!in_array($condition, $this->availableConditions)) {
-            throw new \Exception('Condition not available.');
-        }
-
         $this->conditionCssId = [
-            'condition' => $condition,
+            'condition' => $condition->value,
             'id' => $cssId,
         ];
         return $this;
