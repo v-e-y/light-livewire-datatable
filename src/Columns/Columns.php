@@ -74,4 +74,13 @@ final class Columns
     {
         return $this->columns->pluck('label')->toArray();
     }
+
+    /**
+     * Is any Column is hidden
+     * @return bool
+     */
+    public function hasHidingColumns(): bool
+    {
+        return $this->columns->count() && $this->columns->where('hidden', true)->count() > 0;
+    }
 }

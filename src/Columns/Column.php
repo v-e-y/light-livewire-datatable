@@ -35,6 +35,9 @@ final class Column
     /** @var ?string $filterType */
     public ?string $filterType = null;
 
+    /** @var ?int $truncate */
+    public ?int $truncate = null;
+
     /** @var array<string> $filterTypes Available filter types */
     public static array $filterTypes = [
         // TODO: Add more filter types
@@ -122,5 +125,16 @@ final class Column
         if ($this->filterCallback) {
             call_user_func($this->filterCallback, $queryBuilder, $filterValue);
         }
+    }
+
+    /**
+     * Truncate data after N characters.
+     * @param int $truncateAfter Default: 32
+     * @return self
+     */
+    public function setTruncate(int $truncateAfter = 32): self
+    {
+        $this->truncate = $truncateAfter;
+        return $this;
     }
 }
